@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap");
+
+:root {
+  /* Palette */
+  --primary-solid: #ff3333;
+  --primary-900: rgba(255, 51, 51, 0.9);
+  --primary-500: rgba(255, 51, 51, 0.5);
+  --primary-300: rgba(255, 51, 51, 0.3);
+
+  --secundary-solid: #1d84b5;
+  --secundary-900: rgba(29, 132, 181, 0.9);
+  --secundary-500: rgba(29, 132, 181, 0.5);
+  --secundary-300: rgba(29, 132, 181, 0.3);
+
+  --dark-solid: #1f1f1f;
+  --dark-900: rgba(31, 31, 31, 0.9);
+  --dark-500: rgba(31, 31, 31, 0.5);
+  --dark-300: rgba(31, 31, 31, 0.3);
+
+  --dark-bg-solid: #30343f;
+  --light-bg-solid: #fafaff;
+  --light-font-solid: white;
+
+  /* Typography */
+  --base-font: "Inter", sans-serif;
+  --alternative-font: "Raleway", sans-serif;
+
+  /* font-size */
+  --font-display: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.4em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmall: 1.4em;
+
+  /* Spacing */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-48: 4.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-20: 2rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--base-font);
+  color: var(--dark-solid);
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--font-medium);
+  font-family: inherit;
+  color: inherit;
+}
+
+header,
+footer {
+  color: var(--light-font-solid);
+  font-family: var(--alternative-font);
+  background-color: var(--dark-bg-solid);
+}
+
+/* header */
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  padding: var(--spacing-36);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lista-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-48);
+}
+
+.header-lista {
+  padding: var(--spacing-8) var(--spacing-16);
+  cursor: pointer;
+  transition: background-color 0.8s ease-in-out;
+}
+
+.header-lista:hover {
+  background-color: var(--primary-900);
+}
+
+/* fin header */
+
+/* footer */
+.footer-contenedor {
+  padding: var(--spacing-48);
+  display: block;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: var(--spacing-36);
+}
+
+.footer-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-lista {
+  padding: var(--spacing-8) var(--spacing-16);
+  cursor: pointer;
+  transition: background-color 0.8s ease-in-out;
+}
+
+.footer-lista:hover {
+  background-color: var(--primary-900);
+}
+
+/* fin footer */
+
+/* comienzo main */
+
+.container {
+  max-width: 1200px;
+  margin: var(--spacing-68) auto;
+}
+
+.item-contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.item-image {
+  max-width: 100%;
+  max-height: 550px;
+}
+
+.item-contenedor-descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.item-descripcion-licencia {
+  color: var(--dark-900);
+  font-family: var(--base-font);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.item-descripcion-name {
+  color: var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.item-descripcion {
+  color: var(--dark-900);
+  font-family: var(--base-font);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.item-descripcion-precio {
+  color: var(--dark-900);
+  font-family: var(--base-font);
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.item-formulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.item-formulario-input {
+  display: flex;
+  gap: 4px 24px;
+}
+
+.item-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+
+.item-button button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px auto;
+  border: 0px solid var(--dark-300);
+  background: var(--dark-300);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.item-input {
+  font-size: 24px;
+  padding: 6px 16px;
+  max-width: 100px;
+  text-align: center;
+}
+
+.item-button-submit {
+    color: #ffffff;
+    font-family: var(--base-font);
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    background-color: var(--primary-solid);
+    padding: var(--spacing-16) var(--spacing-36);
+    transition: background-color 0.6s ease-in-out;
+}
+
+.item-button-submit:hover {
+    background-color: var(--secundary-solid);
+}
+
+/* carrusel */
+.contenedor-carrussel-ultimos-lanzamientos {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-68) auto;
+  max-width: 1200px;
+}
+
+.carrusel-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carrusel-titulo {
+  font-size: var(--font-display);
+  font-family: var(--alternative-font);
+  font-weight: 700;
+}
+
+.carrusel-image {
+  width: 400px;
+  height: 100%;
+}
+
+.carrusel-item-descripcion {
+  width: 400px;
+  height: 100%;
+}
+
+.carrusel-descripcion-licencia,
+.carrusel-precio {
+  font-family: var(--base-font);
+  color: var(--dark-900);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.carrusel-descripcion-nombre {
+  font-family: var(--base-font);
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.carrusel-descripcion-cuotas {
+  color: var(--secundary-solid);
+  font-family: var(--base-font);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* fin carrusel*/
