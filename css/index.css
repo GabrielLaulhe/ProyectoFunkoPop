@@ -72,28 +72,36 @@ html /*etiqueta raiz: todo lo que pongamos aca lo heredan las etiquetas hijos*/ 
 
 a {
   text-decoration: none; /* sacar subrayado de los enlaces*/
-  font-size: var(--font-medium);
   color: inherit; /*Le digo que tome el color que viene por herencia, en este caso el establecido
     mas arriba en la etiqueta html. Si luego tengo un "a" dentro de otra etiqueta que tiene otro color
     de fuente, ese "a" va a tomar el color de su padre.*/
   font-family: inherit;
 }
 
+img {
+  width: 100%;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
 header,
 footer {
   color: var(--light-font-solid);
   font-family: var(--alternative-font);
+  
+}
+
+/*   HEADER   */
+
+header {
   background-color: var(--dark-bg-solid);
-}
-
-/* header */
-header ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-container {
   padding: var(--spacing-36);
 }
 
@@ -101,25 +109,59 @@ header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.lista-contenedor {
+.navbar__logo {
+  max-width: 300px;
+}
+
+.navbar__menu {
   display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-48);
+  align-items: center;
+  gap: var(--spacing-20);
 }
 
-.header-lista {
+.navbar__link {
+  font-size: var(--font-medium);
   padding: var(--spacing-8) var(--spacing-16);
-  cursor: pointer;
-  transition: background-color 0.8s ease-in-out;
+  display: inline-block;
+  transition: background 0.3s ease-in-out;
+  position: relative;
 }
 
-.header-lista:hover {
-  background-color: var(--primary-900);
+.navbar__link:hover {
+    background-color: var(--primary-900);
 }
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+    display: none;
+    width: 300px;
+}
+
+.submenu__link {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
+    transition: background 0.3s ease-in-out;
+}
+
+
 
 /* fin header */
 
