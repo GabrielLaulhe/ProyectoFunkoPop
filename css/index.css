@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
 
 :root {
   /*el selector root es similar a la etiqueta html pero se utiliza para diferenciar que aca dentro ponemos las variables*/
@@ -295,11 +297,25 @@ header {
     font-family: var(--alternative-font);
     text-transform: uppercase;
   }
+
+  iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
+  }
+
+  .glide__arrow--left {
+    left: 0;
+  }
   
-  .slider__items {
+  .glide__arrow--right {
+    right: 0;
+  }
+  /* .slider__items {
     display: flex;
     gap: var(--spacing-24);
-  }
+  } se lo sacamos porque ya el carousel viene con un estilo propio para
+  los items del slider */
 
   .card-item__cover {
     display: flex;
