@@ -84,8 +84,19 @@ img {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /*ponemos un margin top y bottom 0 y automatico a los costados en funcion
+  del max-width*/
 }
+
+ul,
+ol {
+  list-style-type: none; /* para que no aparezca ningun numerado*/
+}
+
+p {
+  font-size: var(--font-medium);
+}
+
 
 header,
 footer {
@@ -350,72 +361,39 @@ header {
     color: var(--secundary-solid);
   }
 
-  @keyframes fade {
-
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
   
   
-  
-
 
   /* FIN SLIDER  */
 
 
 /* footer */
-.footer-contenedor {
-  padding: var(--spacing-48);
+
+.footer {
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-68);
   display: block;
 }
 
-footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-style: normal;
+.footer__copy {
+  text-align: center;
   margin-top: var(--spacing-36);
 }
 
-.footer-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-lista {
-  padding: var(--spacing-8) var(--spacing-16);
-  cursor: pointer;
-  transition: background-color 0.8s ease-in-out;
-}
-
-.footer-lista:hover {
-  background-color: var(--primary-900);
-}
 
 /* fin footer */
 
-ul,
-ol {
-  list-style-type: none; /* para que no aparezca ningun numerado*/
-}
 
-p {
-  font-size: var(--font-medium);
-}
+ /*   ANIMATION    */  
+@keyframes fade {
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto; /*ponemos un margin top y bottom 0 y automatico a los costados en funcion
-    del max-width*/
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
