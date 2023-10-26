@@ -1,0 +1,52 @@
+  
+  /*  NORMALIZE */
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0; /* margen */
+    padding: 0; /* Relleno */
+    box-sizing: border-box; /*box sizing va a determinar como se comportan
+      tanto los margenes como los rellenos. Border-box respeta el tamano de la caja,
+      es decir que si le pongo un margen o relleno se va a achicar hacia adentro, es decir que
+      si tengo una caja de 300px, y agrego un margen, la caja se va a mantener en 300px y va a empujar al contenido
+      de la caja hacia dentro pero no se va a expandir la caja, cosa que si haria con el valor content-box. Si le pongo
+      un margen, se va a expandir la caja mas alla de los 300px*/
+  }
+  
+  html /*etiqueta raiz: todo lo que pongamos aca lo heredan las etiquetas hijos*/ {
+    font-size: 62.5%; /*Como se recomienda usar em y rem como unidades de medida, y un
+      em vale 16px, entonces al poner que el tamano va a ser del 62.5% transformamos un em en 10px,
+      de esta manera nos facilita el calculo cuando queremos dar algun tamano*/
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+  }
+  
+  a {
+    text-decoration: none; /* sacar subrayado de los enlaces*/
+    color: inherit; /*Le digo que tome el color que viene por herencia, en este caso el establecido
+      mas arriba en la etiqueta html. Si luego tengo un "a" dentro de otra etiqueta que tiene otro color
+      de fuente, ese "a" va a tomar el color de su padre.*/
+    font-family: inherit;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  
+  ul,
+  ol {
+    list-style-type: none; /* para que no aparezca ningun numerado*/
+  }
+  
+  p {
+    font-size: var(--font-medium);
+  }
+  
+  
+  header,
+  footer {
+    color: var(--light-font-solid);
+    font-family: var(--alternative-font);
+  }
