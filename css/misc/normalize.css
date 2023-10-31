@@ -40,13 +40,19 @@
     list-style-type: none; /* para que no aparezca ningun numerado*/
   }
   
-  p {
-    font-size: var(--font-medium);
-  }
-  
-  
   header,
   footer {
     color: var(--light-font-solid);
     font-family: var(--alternative-font);
   }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}

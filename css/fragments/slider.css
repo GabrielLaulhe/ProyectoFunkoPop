@@ -19,7 +19,7 @@
   } se lo sacamos porque ya el carousel viene con un estilo propio para
   los items del slider */
 
-  iconify-icon {
+  .icon__style {
     color: var(--dark-bg-solid);
     font-size: var(--font-small);
     font-weight: 700;

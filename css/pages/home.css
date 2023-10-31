@@ -3,7 +3,7 @@
 /*    HERO     */
 
 .hero {
-    background-image: url(../img/funkos-banner.webp);
+    background-image: url(../../img/funkos-banner.webp);
     padding: var(--spacing-128);
     background-size: cover;
     background-attachment: fixed;
@@ -110,3 +110,4 @@
   }
   
   /*  FIN COLLECTIONS */
+

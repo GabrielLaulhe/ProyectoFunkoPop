@@ -1,0 +1,46 @@
+.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: var(--spacing-36) auto;
+  gap: var(--spacing-48);
+}
+
+.edit__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-jumbo);
+  font-weight: 700;
+  letter-spacing: 1.68px;
+}
+
+.edit__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+.form__flex select {
+  border: 2px solid var(--dark-solid);
+  border-radius: 6px;
+  font-size: var(--font-medium);
+  font-weight: 500;
+  padding: var(--spacing-12);
+}
+
+.form__edit-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__edit-side {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: var(--alternative-font);
+  font-size: var(--font-medium);
+  font-weight: 500;
+  border-top: 1px solid var(--primary-solid);
+}

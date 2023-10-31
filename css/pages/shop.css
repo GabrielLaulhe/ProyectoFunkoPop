@@ -1,167 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap");
-
-:root {
-  /* Palette */
-  --primary-solid: #ff3333;
-  --primary-900: rgba(255, 51, 51, 0.9);
-  --primary-500: rgba(255, 51, 51, 0.5);
-  --primary-300: rgba(255, 51, 51, 0.3);
-
-  --secundary-solid: #1d84b5;
-  --secundary-900: rgba(29, 132, 181, 0.9);
-  --secundary-500: rgba(29, 132, 181, 0.5);
-  --secundary-300: rgba(29, 132, 181, 0.3);
-
-  --dark-solid: #1f1f1f;
-  --dark-900: rgba(31, 31, 31, 0.9);
-  --dark-500: rgba(31, 31, 31, 0.5);
-  --dark-300: rgba(31, 31, 31, 0.3);
-
-  --dark-bg-solid: #30343f;
-  --light-bg-solid: #fafaff;
-  --light-font-solid: white;
-
-  /* Typography */
-  --base-font: "Inter", sans-serif;
-  --alternative-font: "Raleway", sans-serif;
-
-  /* font-size */
-  --font-display: 4.6em;
-  --font-jumbo: 3.8em;
-  --font-xlarge: 3em;
-  --font-large: 2.4em;
-  --font-medium: 1.8em;
-  --font-small: 1.6em;
-  --font-xsmall: 1.4em;
-
-  /* Spacing */
-  --spacing-128: 12.8rem;
-  --spacing-68: 6.8rem;
-  --spacing-48: 4.8rem;
-  --spacing-36: 3.6rem;
-  --spacing-28: 2.8rem;
-  --spacing-20: 2rem;
-  --spacing-16: 1.6rem;
-  --spacing-12: 1.2rem;
-  --spacing-8: 0.8rem;
-}
-
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: var(--base-font);
-  color: var(--dark-solid);
-}
-ul,
-ol {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  font-size: var(--font-medium);
-  font-family: inherit;
-  color: inherit;
-}
-
-header,
-footer {
-  color: var(--light-font-solid);
-  font-family: var(--alternative-font);
-  background-color: var(--dark-bg-solid);
-}
-
-/* header */
-header ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-container {
-  padding: var(--spacing-36);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.lista-contenedor {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--spacing-48);
-}
-
-.header-lista {
-  padding: var(--spacing-8) var(--spacing-16);
-  cursor: pointer;
-  transition: background-color 0.8s ease-in-out;
-}
-
-.header-lista:hover {
-  background-color: var(--primary-900);
-}
-
-/* fin header */
-
-/* footer */
-.footer-contenedor {
-  padding: var(--spacing-48);
-  display: block;
-}
-
-footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-style: normal;
-  margin-top: var(--spacing-36);
-}
-
-.footer-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-lista {
-  padding: var(--spacing-8) var(--spacing-16);
-  cursor: pointer;
-  transition: background-color 0.8s ease-in-out;
-}
-
-.footer-lista:hover {
-  background-color: var(--primary-900);
-}
-
-/* fin footer */
-
+/*  SHOP  */
 /* comienzo main */
-
-.container {
-  max-width: 1200px;
-  margin: var(--spacing-68) auto;
-}
 
 .shop {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-28);
+  margin-top: var(--spacing-68) auto;
 }
 
 /* comienzo aside */
@@ -268,7 +112,7 @@ input[type="checkbox"] {
 
 /* fin aside */
 
-/* comienzo lista cards */
+/* comienzo cards */
 
 .card-contenedor {
   display: grid;
@@ -277,47 +121,43 @@ input[type="checkbox"] {
   grid-gap: var(--spacing-20);
 }
 
-.card-item {
-  max-width: 300px;
+/* fin cards */
+
+/*   PAGINATION   */
+
+.pagination {
   display: flex;
-  flex-direction: column;
-  padding: var(--spacing-20);
+  justify-content: center;
+  gap: var(--spacing-8);
+  margin: var(--spacing-68) auto;
 }
 
-.card-image {
-  width: 100%;
-}
-
-.card-licencia {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--dark-500);
-  text-transform: capitalize;
-}
-
-.card-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--dark-bg-solid);
-  text-transform: lowercase;
-  text-transform: capitalize;
-}
-
-.card-precio {
-  font-size: 16px;
-  color: #333;
-  font-weight: 400;
-}
-
-.card-cuotas {
-  color: var(--secundary-solid);
-  font-family: Inter;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.card-descripcion {
+.pagination__link {
   display: flex;
-  flex-direction: column;
-  gap: 13px;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-small);
+  font-family: var(--base-font);
+  font-weight: 700;
+  border: 2px solid var(--dark-300);
+  border-radius: 4px;
+  padding: var(--spacing-12);
 }
+
+.pagination__link:first-of-type,
+.pagination__link:last-of-type {
+  color: var(--dark-300);
+}
+
+.pagination__link:hover {
+  background-color: var(--primary-solid);
+  cursor: pointer;
+  color: var(--light-font-solid);
+  border: 2px solid var(--primary-solid);
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination__link--selected {
+  border-color: var(--primary-solid);
+  color: var(--primary-solid);
+} /* este va a quedar asi una vez que quede o haya sido seleccionado*/

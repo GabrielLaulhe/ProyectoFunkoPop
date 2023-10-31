@@ -5,27 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../../css/index.css">
 </head>
 
 <body>
 
-    <!-- comiendo del header -->
     <header>
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="./index.html">
-                    <img src="../img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop" />
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop" />
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP <iconify-icon
+                            icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="./pages/admin.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/login.html">SALIR</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/cart.html">
+                        <img src="../../img/icons/cart-icon.svg" alt="icono de carrito">
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -33,22 +50,27 @@
     <!-- fin del header -->
 
     <main>
-        <section>
-            <h1>INGRESAR A MI CUENTA</h1>
+        <section class="login">
+            <h1 class="login__title">INGRESAR A MI CUENTA</h1>
 
-            <form action="">
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="correo" id="email">
-
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="password" name="contraseña" id="password">
+            <form class="login__form" action="">
+                <div class="form__flex-data">
+                    <div class="login__form-grid">
+                        <label for="email">Email:</label>
+                        <input type="email" name="correo" id="email">
+                    </div>
+                    <div class="login__form-grid">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" name="contraseña" id="password">
+                    </div>
                 </div>
-                <div>
-                    <button type="submit">Ingresar</button>
-                    <input type="checkbox">
-                    <label for="">Recuerdame</label>
-                    <a href="">Olvidé mi contraseña</a>
+                <div class="form__flex-data">
+                    <div class="form__flex-box">
+                        <button class="form__btn" type="submit">Ingresar</button>
+                        <input type="checkbox">
+                        <label class="form__flex-label" for="">Recordarme</label>
+                    </div>
+                    <a class="form__link" href="">Olvidé mi contraseña</a>
                 </div>
 
             </form>
@@ -56,33 +78,29 @@
     </main>
 
     <!-- comienzo del footer -->
-    <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href=" ./pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="./pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="./pages/login.html">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="../img/branding/isotype.svg" alt="logotipo de funkoshop">
-                </picture>
-            </nav>
-
-        </section>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__items">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/login.html">INGRESAR</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../../img/branding/isotype.svg" alt="logotipo de funkoshop">
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
     <!-- fin del footer -->
-
 
 
 </body>

@@ -1,0 +1,121 @@
+.create {
+  margin: var(--spacing-36) auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-36);
+}
+
+.create__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-jumbo);
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  margin-bottom: var(--spacing-36);
+}
+
+.create__form {
+  max-width: 990px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-48);
+}
+
+.form__flex {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-36);
+}
+
+.form__flex-select {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-28);
+}
+
+.form__flex-select label {
+  font-size: var(--font-large);
+  font-weight: 300;
+  letter-spacing: 0.96px;
+}
+
+.form__flex-select select {
+  width: 244px;
+  height: 45px;
+  border: 2px solid var(--dark-solid);
+  border-radius: 6px;
+  font-size: var(--font-medium);
+  font-weight: 500;
+  padding: var(--spacing-8);
+}
+
+.form__flex-select::placeholder {
+  color: var(--dark-300);
+}
+
+label {
+  font-size: var(--font-large);
+  font-weight: 400;
+  letter-spacing: 0.96px;
+}
+
+.form__flex input {
+  border-style: none;
+  border-bottom: 2px solid var(--primary-solid);
+  font-size: var(--font-medium);
+  font-weight: 400;
+  letter-spacing: 0.72px;
+}
+
+.form__flex input:focus {
+  outline-color: var(--secundary-900);
+}
+
+textarea {
+  width: 100%;
+  max-height: 195px;
+  font-size: var(--font-large);
+  padding: var(--spacing-28);
+  border-radius: 4px;
+  border: 1px solid var(--dark-solid);
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #b9b9b9;
+}
+
+.form__flex-data {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+
+.form__flex-stock {
+  max-width: 55px;
+  padding: var(--spacing-8);
+  text-align: center;
+}
+
+.form__flex-img {
+  max-width: 386px;
+}
+
+.form__btn {
+  display: flex;
+  min-width: 175px;
+  min-height: 45px;
+  color: var(--light-font-solid);
+  background-color: var(--primary-solid);
+  font-size: var(--font-xsmall);
+  font-weight: 600;
+  padding: var(--spacing-12) auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__btn:hover {
+  background-color: var(--secundary-solid);
+}
