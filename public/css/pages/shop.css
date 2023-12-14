@@ -1,0 +1,163 @@
+/*  SHOP  */
+/* comienzo main */
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-28);
+  margin-top: var(--spacing-68);
+}
+
+/* comienzo aside */
+.navbar-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-28);
+  max-width: 243.04px;
+  max-height: 493.928px;
+}
+
+.navbar-contenedor h6 {
+  font-family: var(--base-font);
+  font-size: var(--font-large);
+  font-weight: 500;
+  color: var(--dark-solid);
+  gap: 10px;
+}
+
+.navbar-contenedor label {
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  font-weight: 500;
+  color: var(--dark-solid);
+}
+
+.navbar-buscar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar-buscar input {
+  max-width: 100%;
+  max-height: 44px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid var(--dark-900);
+}
+
+.navbar-ordenar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navbar-ordenar select {
+  max-width: 100%;
+  max-height: 44px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid var(--dark-900);
+}
+
+.navbar-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navbar-precio-contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-precio-contenedor input {
+  width: 60px;
+  height: 28px;
+  border-radius: 6px;
+  border: 2px solid var(--dark-solid);
+}
+
+.navbar-filtrar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navbar-filtrar-lista div,
+input,
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: var(--spacing-8);
+}
+
+.navbar-filtrar-lista input {
+  border-radius: 6px;
+  border: 4px solid var(--dark-solid);
+  padding: 4px 8px;
+}
+
+input[type="checkbox"] {
+  background-color: #ffffff;
+  accent-color: var(--primary-solid);
+  width: 16px;
+  height: 16px;
+}
+
+/* fin aside */
+
+/* comienzo cards */
+
+.card-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: auto;
+  grid-gap: var(--spacing-20);
+}
+
+/* fin cards */
+
+/*   PAGINATION   */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-8);
+  margin: var(--spacing-68) auto;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-small);
+  font-family: var(--base-font);
+  font-weight: 700;
+  border: 2px solid var(--dark-300);
+  border-radius: 4px;
+  padding: var(--spacing-12);
+}
+
+.pagination__link:first-of-type,
+.pagination__link:last-of-type {
+  color: var(--dark-300);
+}
+
+.pagination__link:hover {
+  background-color: var(--primary-solid);
+  cursor: pointer;
+  color: var(--light-font-solid);
+  border: 2px solid var(--primary-solid);
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination__link--selected {
+  border-color: var(--primary-solid);
+  color: var(--primary-solid);
+} /* este va a quedar asi una vez que quede o haya sido seleccionado*/

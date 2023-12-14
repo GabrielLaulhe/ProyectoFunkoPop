@@ -1,0 +1,8 @@
+/*   HELPERS */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /*ponemos un margin top y bottom 0 y automatico a los costados en funcion
+    del max-width*/
+  }
+

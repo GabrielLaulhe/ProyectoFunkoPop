@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
+
+@import "../css/misc/variables.css";
+@import "../css/misc/normalize.css";
+@import "../css/misc/helpers.css";
+@import "../css/misc/animation.css";
+
+
+
+@import "../css/fragments/header.css";
+@import "../css/fragments/footer.css";
+@import "../css/fragments/card.css";
+@import "../css/fragments/slider.css";
+
+
+@import "../css/pages/home.css";
+@import "../css/pages/shop.css";
+@import "../css/pages/item.css";
+@import "../css/pages/carrito.css";
+@import "../css/pages/admin.css";
+@import "../css/pages/create.css";
+@import "../css/pages/login.css";
+@import "../css/pages/register.css";
+@import "../css/pages/edit.css"

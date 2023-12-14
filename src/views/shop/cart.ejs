@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main class="cart container">
+        <h1 class="cart__title">CARRITO DE COMPRAS</h1>
+
+        <section class="cart__form">
+            <div class="cart__form-grid">
+                <h3>DETALLE DE PRODUCTO</h3>
+                <h3>CANTIDAD</>
+                    <h3>TOTAL</h3>
+                    <h3></h3>
+            </div>
+            <% cart.forEach(item => { %>
+            <div class="cart__item">
+                <div class="cart__item-details">
+                    <img class="cart__item-img" src="<%= item.img_front %>" alt="Funko Baby Yoda">
+                    <article>
+                        <h3 class="cart__item-title"><%= item.product_name %></h3>
+                        <p class="cart__item-license"><%= item.licence_name %></p>
+                        <p class="cart__item-price">precio: $ <%= item.product_price %></p>
+                    </article>
+                </div>
+                <div class="cart__item-cant">
+                    <input class="cart__item-input" type="number" value="<%= item.quantity || 1 %>">
+                    <div class="cart__button">
+                        <button class="cart__item-button" type="button">+</button>
+                        <button class="cart__item-button" type="button">-</button>
+                    </div>
+                </div>
+                <div>
+                    <p class="cart__item-total">$ <%= item.product_price * (item.quantity || 1) %></p>
+                </div>
+                <div>
+                    <button>
+                        <img src="../../img/icons/icono-delete.png" alt="icono para eliminar item">
+                    </button>
+                </div>
+            </div>
+
+            <% }); %>
+        </section>
+
+        <section class="cart__resumen">
+            <h2 class="cart__resumen-title">RESUMEN</h2>
+            <div class="cart__resumen-bloq">
+                <article class="cart__resumen-box">
+                    <div class="cart__resumen-details">
+                        <h5>CANTIDAD DE ELEMENTOS</h5>
+                        <p>3</p>
+                    </div>
+                    <div class="cart__resumen-details">
+                        <h5>SUBTOTAL</h5>
+                        <p>$ 5.399,97</p>
+                    </div>
+                    <div class="cart__resumen-details">
+                        <h5>ENVIO</h5>
+                        <p>$ 0,00</p>
+                    </div>
+                    <div class="cart__resumen-details">
+                        <h5>TOTAL</h5>
+                        <p>$ 5.399,97</p>
+                    </div>
+                </article>
+                <a href=""><button class="cart__resumen-btn">IR A PAGAR</button></a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>

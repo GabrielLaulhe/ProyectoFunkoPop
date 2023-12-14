@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+
+    <%- include('../partials/headerAdmin') %>
+
+    <main>
+        <section class="create container">
+            <div>
+                <h1 class="create__title">CREAR NUEVO ITEM</h1>
+                <form class="create__form" method="POST" enctype="multipart/form-data">
+                    <div class="form__flex">
+                        <div class="form__flex-select">
+                            <label for="Categoria">Categoria:</label>
+                            <select name="categoria" id="categorias" placeholder="Seleccionar">
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="Star Wars">Star Wars</option>
+                                <option value="Pokemon">Pokemon</option>
+                                <option value="Harry Potter">Harry Potter</option>
+                            </select>
+                        </div>
+                        <div class="form__flex-select">
+                            <label for="Licencia">Licencia:</label>
+                            <select name="Licencia" id="Licencias" placeholder="Seleccionar">
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="Star Wars">Star Wars</option>
+                                <option value="Pokemon">Pokemon</option>
+                                <option value="Harry Potter">Harry Potter</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="form__flex">
+                <label for="Nombre-Producto">Nombre del Producto:</label>
+                <input type="text" required>
+            </div>
+            <div>
+                <textarea name="Descripcion del producto" id="Descripcion-Producto" cols="30" rows="30"
+                    placeholder="Descripcion del Producto"></textarea>
+            </div>
+            <div class="form__flex-data">
+                <div class="form__flex">
+                    <label for="SKU">SKU:</label>
+                    <input type="text" placeholder="SSK111AB001">
+                    <label for="Precio">Precio:</label>
+                    <input type="text" placeholder="$ 0.000,00">
+                    <label for="Stock">Stock:</label>
+                    <input class="form__flex-stock" type="number" step="0.01" placeholder="0">
+                </div>
+                <div class="form__flex">
+                    <label for="Descuento">Descuento:</label>
+                    <input type="number" placeholder="0%">
+                    <div class="form__flex-select">
+                        <label for="Cuotas">Cuotas:</label>
+                        <select name="cuota" id="cuotas">
+                            <option value="3-cuotas">3 cuotas sin interes</option>
+                            <option value="6-cuotas">6 cuotas sin interes</option>
+                            <option value="12-cuotas">12 cuotas sin interes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__flex">
+                    <label for="imagenes">Imagenes:</label>
+                    <input class="form__flex-img" type="file" multiple>
+                </div>
+                <div class="form__flex">
+                    <button class="form__btn" type="submit">Agregar Producto</button>
+                    <button class="form__btn" type="reset">Limpiar</button>
+                </div>
+            </div>
+
+            </form>
+        </section>
+
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+</body>
+
+</html>
