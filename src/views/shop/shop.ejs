@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shop | Funkoshop</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body></body>
+
+<%- include('../partials/header') %>
+
+
+
+  <main class="shop container">
+    <aside class="navbar-contenedor">
+      <div class="navbar-buscar">
+        <h6 for="">BUSCAR</h6>
+        <input type="text" name="" id="" placeholder="Item o Categoria">
+      </div>
+      <div class="navbar-ordenar">
+        <h6 for="">ORDENAR POR</h6>
+        <select name="" id="" aria-placeholder="Mayor a menor">
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+          <option value="desc">Mayor precio</option>
+          <option value="asc">Menor precio</option>
+        </select>
+      </div>
+      <div class="navbar-precio">
+        <h6>PRECIO</h6>
+        <div class="navbar-precio-contenedor">
+          <label for="">MIN</label>
+          <input type="number" name="" id="">
+          <p>-</p>
+          <label for="">MAX</label>
+          <input type="number" name="" id="">
+        </div>
+      </div>
+      <div class="navbar-filtrar">
+        <h6>FILTRAR</h6>
+        <div class="navbar-filtrar-lista">
+          <div>
+            <input type="checkbox">
+            <label for="">NUEVOS</label>
+          </div>
+          <div>
+            <input type="checkbox">
+            <label for="">OFERTAS</label>
+          </div>
+          <div>
+            <input type="checkbox">
+            <label for="">EDICION ESPECIAL</label>
+          </div>
+          <div>
+            <input type="checkbox">
+            <label for="">FAVORITOS</label>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+
+
+    <section>
+      <ul class="card-contenedor">
+        <% funko.slice(0, 9).forEach( item=> { %>
+          <li class="">
+            <article class="card-item">
+              <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
+                <picture class="card-item__cover">
+                  <span class="card-item__tag">Nuevo</span>
+                  <img class="card-item__img--front" src="<%= item.img_front%>"
+                    alt="figura coleccionable funko de un stormtrooper">
+                  <img class="card-item__img--back" src="<%= item.img_back%>"
+                    alt="figura coleccionable funko de un stormtrooper en caja">
+                </picture>
+                <div class="card-item__content">
+                  <p class="card-item__license"><%= item.licence_name%></p>
+                  <h4 class="card-item__name"><%= item.product_name%></h4>
+                  <p class="card-item__price"><%= item.product_price%></</p>
+                  <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <% }); %>
+      </ul>
+
+      <div class="pagination">
+        <a class="pagination__link" href="">
+          < </a>
+            <a class="pagination__link" href=""> 1 </a>
+            <a class="pagination__link" href=""> 2 </a>
+            <a class="pagination__link" href=""> 3 </a>
+            <a class="pagination__link" href=""> 4 </a>
+            <a class="pagination__link" href=""> 5 </a>
+            <a class="pagination__link" href=""> > </a>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="./js/glide.js"></script>
+    </body>
+
+</html>

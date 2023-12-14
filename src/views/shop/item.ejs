@@ -10,61 +10,23 @@
 
 <body>
 
-    <!-- comiendo del header -->
-    <header>
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="./index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop" />
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="../../pages/shop/shop.html">SHOP <iconify-icon
-                            icon="tabler:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Funkos</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Remeras</a>
-                        </li>
-                        <li class="submenu__item">
-                            <a href="" class="submenu__link">Llaveros</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/contact.html">CONTACTO</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__cart" href="../../pages/cart.html">
-                        <img src="../../img/icons/cart-icon.svg" alt="icono de carrito">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- fin del header -->
+    <%- include('../partials/header') %>
 
 
     <main class="container">
         <section class="item">
+            <form method="post" action="/shop/item/<%= item.product_id %>/add">
             <picture class="item__img card-item__cover">
-                <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp"
+                <img class="card-item__img--front" src="<%= item.img_front%>""
                     alt="figura coleccionable funko de un baby yoda">
-                <img class="card-item__img--back" src="../../img/star-wars/baby-yoda-box.webp"
-                    alt="figura coleccionable funko de un baby yoda en caja">
+                <img class="card-item__img--back" src="<%= item.img_back%>"
+                    alt="figura coleccionable funko de <%= item.product_name%>">
             </picture>
             <article class="item__info">
-                <p class="item__license">Star Wars</p>
-                <h3 class="item__name">Baby Yoda Blueball</h3>
-                <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
-                    limitada.</p>
-                <p class="item__price">$ 1799,99</p>
+                <p class="item__license"><%= item.licence_name%></p>
+                <h3 class="item__name"><%= item.product_name%></h3>
+                <p class="item__description">Figura coleccionable de <%= item.product_description%></p>
+                <p class="item__price"><%= item.product_price%></p>
                 <div class="item__cart">
                     <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0">
                     <div class="item__button">
@@ -75,6 +37,7 @@
                 </div>
                 <p class="item__promo"><a href="">Ver metodo de pago</a> - 3 CUOTAS SIN INTERES</p>
             </article>
+        </form>
         </section>
 
         <section class="slider container glide">
@@ -152,30 +115,8 @@
     </main>
 
 
-    <!-- comienzo del footer -->
-    <footer class="footer">
-        <nav class="navbar container">
-            <ul class="navbar__items">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="shop.html">SHOP</a>
-                </li>
-                <li class="footer-lista">
-                    <a class="navbar__link" href="./pages/register.html">REGISTRARSE</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/login.html">INGRESAR</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
-                </li>
-            </ul>
-            <picture>
-                <img src="../img/branding/isotype.svg" alt="logotipo de funkoshop">
-            </picture>
-        </nav>
-        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer>
-    <!-- fin del footer -->
+    <%- include('../partials/footer') %>
+    
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="../../js/item.js"></script>
